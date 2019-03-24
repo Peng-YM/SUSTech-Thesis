@@ -1,0 +1,155 @@
+% !TEX program = xelatex
+\documentclass[bachelor,openright,notchinese]{sustcthesis}
+% 默认twoside 双面打印
+% 将master修改为bachelor, doctor or master
+% 要使用adobe字体，添加adobefonts选项
+% 使用euler数学字体，如不愿使用，去掉euler
+% 使用外文写作，请添加notchinese
+
+% 设置图形文件的搜索路径
+\graphicspath{{figures/}}
+
+% 用到的宏包
+\usepackage{algorithmicx}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 封面部分
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ % 中文封面内容
+  \title{毕业论文}%一般情况下扉页和封皮、书脊共用一个标题文本，可以不用定义\spinetitle（仅硕博有用）, \covertitle（本硕博均有用）和\encovertitle（仅本科有用）。特殊情况见下。
+  %特殊情况1：本例中\title命令里含有换行控制字符，这会导致制作书脊的时候出现错误，例如如果你注释掉\spinetitle{...}这一行就会报错。这时需要定义一个不含换行等命令的\spinetitle，这并不表示\spinetitle里不能有任何命令——只能使用有限的命令。
+  %特殊情况2：本例中标题过长，所以需要缩小书脊标题的字号。
+  %特殊情况3：本例中中英文混排，由于tex竖排的原理限制，中英文基线不重合，所以需要人工调整英文的基线。具体调整量根据不同字体有所不同。
+  %\covertitle{六次循环域}
+  %\covertitle{中文题目第一行\\中文题目第二行}
+  %不要在此调整封皮字体大小！ Do not set Cover Page font size here!
+  %特殊情况4：本例中\title中含有多个换行，导致标题超过了两行。根据制本厂规定，封皮标题不能超过两行。因此需要定义封皮使用的标题\covertitle. 如果你注释掉这一行，就会发现封皮不符合规定。
+  %\encovertitle{On Cyclic Sextic Fields}
+  %\encovertitle{English Title Line 1\\English Title Line 2\\English Title Line 3}
+  %不要在此调整封皮字体大小！ Do not set Cover Page font size here!
+  %特殊情况5:仅本科生有用。本科封皮中有英文标题，不超过三行。与上类似。
+  \author{张 \ 三 }
+  \depart{计算机科学与工程}%系别，硕博请用系代号，本科请用全称如
+  \major{计算机专业}%专业，硕博请用全称，本科不需要
+  \advisor{XXXX \ 教授}
+  % \coadvisor{XXX\ 教授,\ XXX\ 教授}%第二导师，没有请注释掉
+  \studentid{XXXXX}%For bachelor only
+  \submitdate{二〇一九年三月}
+
+  % 英文封面内容
+  \entitle{Bachelor Thesis}
+  \enauthor{Alan Mathison Turing}
+  \studentid{XXXX}
+  \endepart{Computer Science and Engineering}
+  \enmajor{Computer Science}
+  \enadvisor{Prof. XXX}
+  % \encoadvisor{}
+  % \encoadvisorsec{}
+  \ensubmitdate{March, 2019}
+  
+\begin{document}
+
+% 封面
+\maketitle
+
+%特别注意，以下述顺序为准，在对应部分添加文档部件，切勿颠倒顺序：
+%本科论文的文档部件顺序是：
+%    frontmatter：致谢、目录、中文摘要、英文摘要、
+%    mainmatter： 正文章节
+%    backmatter： 参考文献或资料注释、附录
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 前言部分
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frontmatter
+\makeatletter
+
+\ifustc@bachelor
+	%%%%%%%%%%%%%%%%%
+	%本科论文修改这里
+	%%%%%%%%%%%%%%%%%
+	% 致谢
+	\include{chapter/honest}
+	\include{chapter/chap-preface}
+	
+	
+	%目录部分
+	%目录
+	\tableofcontents
+	%默认表格、插图、算法索引名称分别为“表格索引”、“插图索引”和“算法索引”
+	%如果需要自行修改lot，lof，loa的名称，请定义
+	%\ustclotname{...}
+	%\ustclofname{...}
+	%\ustcloaname{...}
+
+	% 表格索引
+	%\ustclot
+	% 插图索引
+	%\ustclof
+	%算法索引 
+	%如果需要使用算法环境并列出算法索引，请加入补充宏包。
+	%\ustcloa
+	
+	% 摘要
+	\include{chapter/abstract}%此文件中含有中英文摘要
+  \include{chapter/denotation}
+    
+\else
+	%%%%%%%%%%%%%%%%%
+	%硕博论文修改这里
+	%%%%%%%%%%%%%%%%%
+	% 摘要
+	\include{chapter/abstract}%此文件中含有中英文摘要
+	% 目录
+	\tableofcontents
+	%默认表格、插图、算法索引名称分别为“表格索引”、“插图索引”和“算法索引”
+	%如果需要自行修改lot，lof，loa的名称，请定义
+	%\ustclotname{...}
+	%\ustclofname{...}
+	%\ustcloaname{...}
+
+	% 表格索引
+	\ustclot
+	% 插图索引
+	\ustclof
+	%算法索引 
+	%如果需要使用算法环境并列出算法索引，请加入补充宏包。
+	%\ustcloa
+	
+	%符号说明，需要加入补充包
+	\include{chapter/denotation}%不是必需的，如果不想列出请注释掉
+\fi
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 正文部分
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mainmatter
+  \include{chapter/introduction}	
+  %自行添加
+  \include{chapter/chapter2}
+  \include{chapter/conclusion} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 附件部分
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\backmatter
+  %结语
+  
+  % 参考文献
+  % 使用 BibTeX
+  % 选择参考文献的排版格式。注意ustcbib这个格式不保证完全符合要求，请自行决定是否使用
+  \bibliographystyle{sustcbib}%{GBT7714-2005NLang-UTF8}
+  \bibliography{bib/tex}
+  \nocite{*} % for every item
+  % 不使用 BibTeX
+  % \include{chapter/bib}
+  % 附录，没有请注释掉
+  \begin{appendix}
+
+  \include{chapter/chap-appA}
+  
+  \end{appendix}
+  \include{chapter/thanks}
+\end{document}
