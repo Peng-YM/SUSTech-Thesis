@@ -1,11 +1,14 @@
-#!/bin/bash
-find . -name '*.aux' -delete
-find . -name '*.log' -delete
-find . -name '*.lof' -delete
-find . -name '*.bbl' -delete
-find . -name '*.blg' -delete
-find . -name '*.thm' -delete
-find . -name '*.toc' -delete
-find . -name '*.out' -delete
-find . -name '*.loa' -delete
-find . -name '*.synctex.gz' -delete
+#!/bin/sh
+
+arg=${1:-.}
+exts="run.xml bcf snm nav vrb  aux bbl blg brf idx ilg ind lof log lol lot out toc synctex.gz"
+
+if [ -d $arg ]; then
+    for ext in $exts; do
+         rm -f $arg/*.$ext
+    done
+else
+    for ext in $exts; do
+         rm -f $arg.$ext
+    done
+fi
