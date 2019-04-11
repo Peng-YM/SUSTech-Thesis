@@ -14,7 +14,7 @@
 \RequirePackage[lined,boxed,linesnumbered,algochapter]{algorithm2e}
 \RequirePackage{graphicx,psfrag}
 \RequirePackage{enumerate}
-\RequirePackage{subfig,epsfig}
+\RequirePackage{subcaption,epsfig}
 \RequirePackage{float}
 \RequirePackage{paralist}
 \RequirePackage{booktabs}
