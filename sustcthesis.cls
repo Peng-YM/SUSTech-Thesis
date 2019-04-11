@@ -718,7 +718,7 @@
 \fancypagestyle{plain}{}
 \pagestyle{fancy}
   \fancyhf{}
-  \ifustc@bachelor\fancyhead[C]{\xiaowuhao{SUSTC's Dissertation for Bachelor's Degree}}\relax\else\fancyhead[C]{\small \nouppercase\leftmark}\fi
+  \ifustc@bachelor\fancyhead[C]{\xiaowuhao{SUSTech's Dissertation for Bachelor's Degree}}\relax\else\fancyhead[C]{\small \nouppercase\leftmark}\fi
   \renewcommand{\headrulewidth}{0.7pt}
 
 \renewcommand\frontmatter{%
