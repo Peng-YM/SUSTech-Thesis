@@ -38,5 +38,7 @@ $ ./clean
 ##  常见问题
 
 - 推荐在Mac下使用**MacTeX**，Windows下使用**TeXlive**.
+  - MacTeX清华源: [Link](https://mirrors.tuna.tsinghua.edu.cn/ctan/systems/mac/mactex/mactex-20180417.pkg)
+  - TeXLive清华源：[Link](https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/texlive2018-20180414.iso)
 - **请不要clone项目到中文路径下，这会导致latex编译失败**
 - **使用Overleaf编译请手动修改编译器为XeLaTeX**。
