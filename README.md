@@ -1,4 +1,4 @@
-# 南科大毕业论文LaTex模板
+# 南科大毕业论文LaTeX模板
 本模板主要基于中科大的毕业论文模板修改而成，由一个学长修改成南科大格式，原[repo](https://github.com/whzecomjm/sustcthesis)。我主要做了如下修改：
 1. 添加了适用于Linux/Unix的脚本用于生成/清理PDF文件
 2. 修改了新版的校徽和校名。
@@ -33,10 +33,10 @@ $ ./clean
 
 点击`make.bat`或者`clean.bat`.
 
-效果请查看样例[PDF]().
+效果请查看样例[PDF](https://github.com/Peng-YM/SUSTech-Thesis/blob/master/main.pdf).
 
 ##  常见问题
 
 - 推荐在Mac下使用**MacTeX**，Windows下使用**TeXlive**.
 - **请不要clone项目到中文路径下，这会导致latex编译失败**
-- **使用Overleaf编译请手动修改编译器为xeLaTeX**。
+- **使用Overleaf编译请手动修改编译器为XeLaTeX**。
