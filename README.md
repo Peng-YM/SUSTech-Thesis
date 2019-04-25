@@ -35,6 +35,8 @@ $ ./clean
 
 效果请查看样例[PDF]().
 
-##  Tips
+##  常见问题
 
-推荐在Mac下使用**MacTeX**，Windows下使用**TeXlive**.
+- 推荐在Mac下使用**MacTeX**，Windows下使用**TeXlive**.
+- **请不要clone项目到中文路径下，这会导致latex编译失败**
+- **使用Overleaf编译请手动修改编译器为xeLaTeX**。
