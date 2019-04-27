@@ -11,7 +11,10 @@
 
 % 用到的宏包
 \usepackage{algorithm2e}
-
+% 阻止hyperref宏包影响tableofcontent内容
+\makeatletter
+\let\Hy@linktoc\Hy@linktoc@none
+\makeatother
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 封面部分
