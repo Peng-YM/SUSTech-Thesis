@@ -9,7 +9,7 @@
 %   Created 
 %       2014.03.26 by ywg@USTC
 %   Last Modified
-%       2014.08.29 by whzecomjm@SUSTC
+%       2019.04.27 by pengym@SUSTech
 %
 
 \NeedsTeXFormat{LaTeX2e}[1999/12/01]
@@ -132,8 +132,8 @@
 	bookmarksopen=true,
 	breaklinks=true,
 	colorlinks=true,%
-	linkcolor=black,%
-	citecolor=black,%
+	linkcolor=red,%
+	citecolor=blue,%
 	plainpages=false,%
 	pdfstartview=FitH,}
 \AtBeginDocument{\hypersetup{%
