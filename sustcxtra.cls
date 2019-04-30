@@ -7,7 +7,7 @@
 %   Created 
 %       2014.03.26 by ywg@USTC
 %   Last Modified
-%       2014.08.24 by whzecomjm@USTC
+%       2019.04.30 by PengYM@SUSTech
 %
 
 \RequirePackage{times}
@@ -30,7 +30,8 @@
 %\RequirePackage{caption3}
 \RequirePackage{array}
 \RequirePackage{fancyvrb}
-\RequirePackage{xcolor}
+% Enable cell color in table environment
+\RequirePackage[table,xcdraw]{xcolor}
 \ifustc@euler
 	\usepackage[OT1,euler-digits]{eulervm}
 \fi
