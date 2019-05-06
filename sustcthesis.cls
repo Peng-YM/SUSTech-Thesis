@@ -456,7 +456,7 @@
   \begin{center}
   \begin{tabular}{lr}CLC\underline{\hspace{2cm}}\qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad &Number\underline{\hspace{2cm}}\\ UDC\underline{\hspace{2cm}}&Classification Level\underline{\hspace{2cm}}\end{tabular}\vspace*{1.5cm}
     \vskip 0cm
-      \USTCLarge{\ttfamily{SOUTH UNIVERSITY OF SCIENCE AND TECHNOLOGY}}
+      \USTCLarge{\ttfamily{SOUTHERN UNIVERSITY OF SCIENCE AND TECHNOLOGY}}
     \vskip 0.0cm
     \USTCHuge{\ttfamily\ifustc@doctor
       {A Dissertation for Doctor's Degree}
