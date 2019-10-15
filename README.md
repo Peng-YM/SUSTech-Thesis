@@ -6,7 +6,7 @@
 4. 表格中可以使用xcolor宏包高亮单元格
 5. 使用符合 GB/T 7714-2005 规范的 BibTeX 样式文件，支持知网检测
 
-![screenshot 2019-03-24 23.33.42](https://ws4.sinaimg.cn/large/006tKfTcgy1g1eb6auhdmj30kq0qx775.jpg)
+![FirstPage.png](http://ww1.sinaimg.cn/large/c2dfc71dgy1g7z5ig05joj20hf0mdtay.jpg)
 
 ## 目录结构
 
